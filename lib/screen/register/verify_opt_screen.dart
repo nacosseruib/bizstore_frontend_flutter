@@ -30,7 +30,7 @@ class _VerifyOptScreenState extends State<VerifyOptScreen> {
   Widget build(BuildContext context) {
     const focusedBorderColor = primaryDeepColor;
     const fillColor = whiteColor;
-    const borderColor = Colors.green; //Color.fromRGBO(23, 171, 144, 0.4);
+    const borderColor = primaryLightColor; //Color.fromRGBO(23, 171, 144, 0.4);
 
     final defaultPinTheme = PinTheme(
       width: 56,
@@ -136,7 +136,7 @@ class _VerifyOptScreenState extends State<VerifyOptScreen> {
                                     ),
                                   ),
                                   errorPinTheme: defaultPinTheme.copyBorderWith(
-                                    border: Border.all(color: Colors.redAccent),
+                                    border: Border.all(color: redColor),
                                   ),
                                 ),
                               ),

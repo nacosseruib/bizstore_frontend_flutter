@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../components/changeTheme.dart';
 import '../components/components.dart';
+import '../components/constants.dart';
 import '../controller/profile/profile_controller.dart';
 import '../screen/profile/profile_screen.dart';
 
@@ -29,7 +30,8 @@ class _DrawerBarState extends State<DrawerBar> {
                 radius: 50,
                 backgroundImage: customAdvanceNetworkImage(
                     'https://media1.s-nbcnews.com/j/newscms/2019_14/2808721/190403-joaquin-phoenix-joker-cs-1005a_4715890895d3fad1f9e7ccec85386821.fit-760w.jpg'),
-                backgroundColor: Theme.of(context).primaryColor,
+                //backgroundColor: Theme.of(context).primaryColor,
+                backgroundColor: primaryDeepColor,
               ),
               const SizedBox(width: 20,),
               Column(
@@ -47,10 +49,10 @@ class _DrawerBarState extends State<DrawerBar> {
           ),
           SizedBox(height: 10),
           Row(
-            children: <Widget>[
+            children: [
               _estimateWidget('Followers', '826'),
               _estimateWidget('Following', '251'),
-              _estimateWidget('Wallet Bal.', '899,000,000.80'),
+              _estimateWidget('Services.', '1,299'),
             ],
           ),
           SizedBox(height: 10),

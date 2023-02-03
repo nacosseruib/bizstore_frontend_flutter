@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../model/onboard_page_item.dart';
+import '../../model/onboard/onboard_page_item.dart';
 import 'fading_sliding_widget.dart';
 
 
