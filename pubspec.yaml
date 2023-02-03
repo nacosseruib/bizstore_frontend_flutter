@@ -52,6 +52,9 @@ dependencies:
   simple_animations: ^5.0.0+3
   pinput: ^2.2.21
   flutter_sticky_widgets: ^0.0.3
+  video_player: ^2.5.1
+  stacked: ^3.1.0+3
+  get_it: ^7.2.0
 
 
 dev_dependencies:

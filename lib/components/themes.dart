@@ -47,6 +47,10 @@ class MyTheme {
       elevation: 25,
       backgroundColor: blackLightColor,
     ),
+    // tabBarTheme: const TabBarTheme(
+    //   labelColor: primaryDeepColor,
+    //   unselectedLabelColor: blackColor,
+    // ),
     appBarTheme: const AppBarTheme(
       backgroundColor: blackLightColor,
       elevation: 20,
@@ -103,6 +107,10 @@ class MyTheme {
       unselectedItemColor: blackColor,
       elevation: 20,
       backgroundColor: whiteColor,
+    ),
+    tabBarTheme: const TabBarTheme(
+      labelColor: primaryDeepColor,
+      unselectedLabelColor: blackColor,
     ),
     appBarTheme: const AppBarTheme(
       backgroundColor: primaryDeepColor,

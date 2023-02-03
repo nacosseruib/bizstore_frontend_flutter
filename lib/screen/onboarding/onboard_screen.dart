@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../../model/onboard_page_item.dart';
+import '../../model/onboard/onboard_page_item.dart';
+import '../home/home_screen.dart';
 import '../login/login_screen.dart';
 import '../register/email_screen.dart';
 import '../register/phone_screen.dart';
@@ -114,7 +115,7 @@ class _OnboardScreenState extends State<OnboardScreen> with SingleTickerProvider
             bottom: 20,
             child: GestureDetector(
               onTap: () {
-                Get.offAll(const EmailScreen());
+                Get.offAll(const HomeScreen()); //Get.offAll(const EmailScreen());
               },
               child: FadingSlidingWidget(
                 animationController: _animationController,
@@ -147,6 +148,7 @@ class _OnboardScreenState extends State<OnboardScreen> with SingleTickerProvider
                           : const Color(0xFF220555),
                       fontSize: width * 0.05,
                       fontFamily: 'ProductSans',
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                 ),

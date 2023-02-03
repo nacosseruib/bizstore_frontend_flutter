@@ -3,16 +3,17 @@ import 'package:flutter/material.dart';
 
 
 // COLORS
-const primaryDeepColor      = Color.fromARGB(255, 4, 90, 94); //Color(0xFF006064); Color.fromARGB(255, 4, 94, 84)
-const primaryLightColor     = Color.fromARGB(255, 4, 95, 94); //Color(0xFF00838F);
+const primaryDeepColor      = Color.fromARGB(255, 4, 70, 94); //Color(0xFF006064); Color.fromARGB(255, 4, 94, 84)
+const primaryLightColor     = Color.fromARGB(255, 4, 80, 94); //Color(0xFF00838F);
 const blackColor            = Colors.black;
 const blackLightColor       = Colors.black26;
 const whiteColor            = Colors.white;
-const greyColor             = Colors.grey;
+const greyColor             = Colors.grey; //Colors.white60
 const greyLightColor        = Color.fromARGB(10, 0, 0, 0);
 const backgroundWhiteColor  = whiteColor;
 const backgroundGreyColor   = blackLightColor;
 const textColor             = blackColor;
+const redColor              = Colors.redAccent;
 
 
 // Padding

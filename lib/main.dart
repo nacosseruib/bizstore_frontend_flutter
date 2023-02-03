@@ -9,6 +9,7 @@ import 'components/routes.dart';
 import 'components/themes.dart';
 import 'network/local/cache_helper.dart';
 import 'network/remote/dio_helper.dart';
+import 'network/service_locator.dart';
 import 'network/sqlite_data/cubit.dart';
 import 'network/sqlite_data/states.dart';
 
@@ -31,6 +32,9 @@ void main() async {
       widget = const OnboardScreen();
     }
     //end theme switcher
+    setupGetItLocator();
+    WidgetsFlutterBinding.ensureInitialized();
+
   runApp(MyApp(isDarkMode, widget, token));
 }
 

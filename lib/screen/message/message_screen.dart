@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../widgets/app_bar.dart';
 import '../../widgets/drawer_bar.dart';
-import '../chat/chat_list.dart';
+import '../chat/chat_list_screen.dart';
 import '../post/post_list.dart';
 
 
@@ -20,12 +19,11 @@ class _MessageScreenState extends State<MessageScreen> {
     return DefaultTabController(
         length: 4,
         child: Scaffold(
-        appBar: AppBarWidget(appTitle: 'Biztore', showTabBar: 'message'),
         drawer: const DrawerBar(),
         body:  SafeArea(
              child: TabBarView(
                 children: [
-                  const ChatList(),
+                  const ChatListScreen(),
                   Container(child: Center(child: Text('Group Here'),)),
                   const PostList(),
                   Container(child: Center(child: Text('Store Here'),)),
