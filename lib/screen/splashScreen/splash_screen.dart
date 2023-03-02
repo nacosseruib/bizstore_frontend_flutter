@@ -31,11 +31,11 @@ class _SplashScreenState extends State<SplashScreen> {
                 RichText(
                     text: const TextSpan(
                         children: [
-                          TextSpan(text: ' BizTore ', style: TextStyle(color: primaryDeepColor, fontSize: 30, fontWeight: FontWeight.bold)),
+                          TextSpan(text: appDisplayName, style: TextStyle(color: primaryDeepColor, fontSize: 30, fontWeight: FontWeight.bold)),
                         ]
                     )),
                 const SizedBox(height: 10),
-                const Text('Everything You Need', style: TextStyle(color: primaryLightColor, fontSize: 10, fontWeight: FontWeight.bold),),
+                const Text(appSloganName, style: TextStyle(color: primaryLightColor, fontSize: 14, fontWeight: FontWeight.normal),),
                 const SizedBox(height: 30),
 
               ],
@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 alignment: FractionalOffset.bottomCenter,
                 child: MaterialButton(
                   onPressed: () => {},
-                  child: const Text('Version 1.0.0 @2023', style: TextStyle(color: primaryLightColor, fontSize: 15, fontWeight: FontWeight.normal),),
+                  child: const Text(appVersion, style: TextStyle(color: primaryLightColor, fontSize: 15, fontWeight: FontWeight.normal),),
                 ),
               ),
             ),

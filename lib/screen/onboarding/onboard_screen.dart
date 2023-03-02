@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import '../../components/constants.dart';
 import '../../model/onboard/onboard_page_item.dart';
 import '../home/home_screen.dart';
 import '../login/login_screen.dart';
@@ -87,7 +88,7 @@ class _OnboardScreenState extends State<OnboardScreen> with SingleTickerProvider
     return Scaffold(
       body: Stack(
         alignment: Alignment.center,
-        children: <Widget>[
+        children: [
           Positioned.fill(
             child: PageView(
               controller: _pageController,
@@ -115,7 +116,8 @@ class _OnboardScreenState extends State<OnboardScreen> with SingleTickerProvider
             bottom: 20,
             child: GestureDetector(
               onTap: () {
-                Get.offAll(const HomeScreen()); //Get.offAll(const EmailScreen());
+                Get.offAll(() => const HomeScreen());
+                //Get.offAll(() => const EmailScreen());
               },
               child: FadingSlidingWidget(
                 animationController: _animationController,
@@ -132,7 +134,7 @@ class _OnboardScreenState extends State<OnboardScreen> with SingleTickerProvider
                       colors: onboardPage
                           ? [
                               const Color(0xFF8200FF),
-                              const Color(0xFFFF3264),
+                               primaryLightColor,
                             ]
                           : [
                               const Color(0xFFFFFFFF),

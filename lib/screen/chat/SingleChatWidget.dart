@@ -38,7 +38,7 @@ class SingleChatWidget extends StatelessWidget {
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 6.0),
+                  padding: const EdgeInsets.only(left: 5.0),
                   child: Text(
                     '$chatMessage',
                     style: const TextStyle(overflow: TextOverflow.ellipsis),

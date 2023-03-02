@@ -20,7 +20,7 @@ class _DrawerBarState extends State<DrawerBar> {
 
   Widget _headerWidget(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: Column(
         children: <Widget>[
           const SizedBox(height: 30),
@@ -30,7 +30,6 @@ class _DrawerBarState extends State<DrawerBar> {
                 radius: 50,
                 backgroundImage: customAdvanceNetworkImage(
                     'https://media1.s-nbcnews.com/j/newscms/2019_14/2808721/190403-joaquin-phoenix-joker-cs-1005a_4715890895d3fad1f9e7ccec85386821.fit-760w.jpg'),
-                //backgroundColor: Theme.of(context).primaryColor,
                 backgroundColor: primaryDeepColor,
               ),
               const SizedBox(width: 20,),
@@ -38,7 +37,7 @@ class _DrawerBarState extends State<DrawerBar> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const <Widget>[
-                  Text('Biztore', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
+                  Text(appDisplayName, style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
                   SizedBox(height: 25),
                   Text('@ajaxsamson', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                   SizedBox(height: 5),
@@ -68,7 +67,7 @@ class _DrawerBarState extends State<DrawerBar> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
+            children: [
               Text(count,
                   style: TextStyle(fontWeight: FontWeight.bold)),
               SizedBox(height: 10),

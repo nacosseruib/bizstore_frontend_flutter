@@ -1,3 +1,4 @@
+import 'package:cached_video_player/cached_video_player.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:stacked/stacked.dart';
@@ -7,7 +8,7 @@ import '../../../controller/video/video_controller.dart';
 
 
 class VideoViewModel extends BaseViewModel {
-  VideoPlayerController? controller;
+  CachedVideoPlayerController? controller;
   VideosAPI? videoSource;
 
   int prevVideo = 0;
@@ -21,9 +22,11 @@ class VideoViewModel extends BaseViewModel {
   changeVideo(index) async {
     if (videoSource!.listVideos[index].controller == null) {
       await videoSource!.listVideos[index].loadController();
+      videoSource!.listVideos[index].controller!.initialize();
+      videoSource!.listVideos[index].controller!.play();
+      notifyListeners();
     }
-    videoSource!.listVideos[index].controller!.play();
-    //videoSource.listVideos[prevVideo].controller.removeListener(() {});
+    //videoSource?.listVideos[prevVideo].controller?.removeListener(() {});
     if (videoSource!.listVideos[prevVideo].controller != null) {
       videoSource!.listVideos[prevVideo].controller!.pause();
     }
@@ -36,11 +39,25 @@ class VideoViewModel extends BaseViewModel {
   }
 
   void loadVideo(int index) async {
-    if (videoSource!.listVideos.length > index) {
-      await videoSource!.listVideos[index].loadController();
-      videoSource!.listVideos[index].controller?.play();
-      notifyListeners();
+    int videoLength = videoSource!.listVideos.length;
+    for(int i = 0; i <= videoLength; i++) {
+      // Create a CachedVideoPlayerController and specify the video file
+      await videoSource!.listVideos[i].loadController();
+      videoSource!.listVideos[i].controller!.initialize().then((_) {
+       if(i < 1){
+         videoSource!.listVideos[i].controller?.play();
+         notifyListeners();
+       }
+      });
+
+
     }
+    // if (videoSource!.listVideos.length > index) {
+    //   await videoSource!.listVideos[index].loadController();
+    //   videoSource!.listVideos[index].controller!.initialize();
+    //   videoSource!.listVideos[index].controller?.play();
+    //   notifyListeners();
+    // }
   }
 
   void setActualScreen(index) {
