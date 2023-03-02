@@ -127,7 +127,7 @@ class _WelcomeState extends State<WelcomePage>
                   animationController: _animationController,
                   interval: const Interval(0.7, 1.0),
                   child: Text(
-                    'Discover and share the fun around you',
+                    '', //Discover and share the fun around you
                     style: TextStyle(
                       color: const Color(0xFFFFFFFF),
                       fontSize: width * 0.056,

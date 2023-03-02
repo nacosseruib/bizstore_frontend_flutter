@@ -69,6 +69,9 @@ class _PasswordScreenState extends State<PasswordScreen> {
                                 //First Name
                                 const Expanded(
                                   child:  TextField(
+                                    obscureText: true,
+                                    enableSuggestions: false,
+                                    autocorrect: false,
                                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
                                     textAlign: TextAlign.center,
                                     decoration: InputDecoration(
@@ -102,6 +105,9 @@ class _PasswordScreenState extends State<PasswordScreen> {
                               children: [
                                 const Expanded(
                                   child:  TextField(
+                                    obscureText: true,
+                                    enableSuggestions: false,
+                                    autocorrect: false,
                                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
                                     textAlign: TextAlign.center,
                                     decoration: InputDecoration(

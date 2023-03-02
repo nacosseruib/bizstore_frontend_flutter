@@ -64,9 +64,9 @@ class VideoDescription extends StatelessWidget {
                   //       color: primaryLightColor,
                   //       fontWeight: FontWeight.bold),
                   // ),
-                  const SizedBox(height: 7,),
+                  const SizedBox(height: 4,),
                   Text(videtoTitle, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 16, color: whiteColor),),
-                  const SizedBox(height: 7),
+                  const SizedBox(height: 4),
                   Row(children: [
                     VideoCircleImageAnimation(
                       child: const Icon(Icons.playlist_add_check_circle_outlined, color: Colors.white70,)//_getMusicPlayerAction(userPic),
@@ -76,7 +76,7 @@ class VideoDescription extends StatelessWidget {
                   ]),
                   Row(children: [
                     //CircleImageAnimation(
-                     _getMusicPlayerAction(userPic),
+                     //_getMusicPlayerAction(userPic),
                     //),
                     const Text('@ajaxsamson', overflow: TextOverflow.ellipsis, style: TextStyle(color: whiteColor, fontSize: 13.0))
                   ]),
