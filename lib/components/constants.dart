@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 
 
 //Literals  constants
-const appDisplayName          = "BizTore";
-const appSloganName           = "Everything you need to start your BizTore";
+const appDisplayName          = "VasTalk";
+const appSloganName           = "Everything you need to start your Business";
 const appVersion              = "Version 1.0.0 @2023";
-const mySmartAINameConstant   = "My Smart AI";
+const mySmartAINameConstant   = "$appDisplayName AI";
 const chatBgWallpaperLight    =  "assets/images/chat_bg_wallpaper_light.png";
 const chatBgWallpaperDark     =  "assets/images/chat_bg_wallpape_dark.png";
 

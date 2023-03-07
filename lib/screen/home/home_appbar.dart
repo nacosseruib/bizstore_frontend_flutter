@@ -68,7 +68,7 @@ import '../story/story_screen.dart';
                        children:  [
                          IconButton( onPressed: () { Scaffold.of(context).openDrawer(); }, padding: const EdgeInsets.only(left: 0.0), color: whiteColor, icon: const Icon(Icons.menu), hoverColor: primaryLightColor,),
                          const SizedBox(width: 1),
-                         const Text(appDisplayName, style: TextStyle(fontSize: 30)),
+                         const Text(appDisplayName, style: TextStyle(fontSize: 25)),
                        ],
                      ),
                     actions: [
