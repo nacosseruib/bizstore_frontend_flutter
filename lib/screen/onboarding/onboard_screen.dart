@@ -116,8 +116,8 @@ class _OnboardScreenState extends State<OnboardScreen> with SingleTickerProvider
             bottom: 20,
             child: GestureDetector(
               onTap: () {
-                Get.offAll(() => const HomeScreen());
-                //Get.offAll(() => const EmailScreen());
+                //Get.offAll(() => const HomeScreen());
+                Get.offAll(() => const EmailScreen());
               },
               child: FadingSlidingWidget(
                 animationController: _animationController,
